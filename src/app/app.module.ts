@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { ColorToolbarComponent } from './layouts/color-toolbar/color-toolbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavbarComponent,
-    ColorToolbarComponent
+    ColorToolbarComponent,
+    HomeComponent,
+    BlogComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
