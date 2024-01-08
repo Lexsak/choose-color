@@ -41,12 +41,16 @@ nav {
   color: var(--black-60);
 }
 
+.template-container {
+  position: relative;
+}
 .template {
   display: flex;
   border: 1px solid var(--black-60);
-  padding: 8px 16px;
+  padding: 8px 19.5px;
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 .arrow-down {
@@ -56,9 +60,13 @@ nav {
 }
 
 .dropdown-list {
+  position: absolute;
   border: 1px solid var(--black-60);
   border-radius: 5px;
   padding: 4px;
+  z-index: 1001;
+  background-color: #ffffff;
+
 }
 
 .dropdown-list p {

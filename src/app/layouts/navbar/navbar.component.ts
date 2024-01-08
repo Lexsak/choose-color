@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   dropDownListLinks: string[] = ['blog', 'dashboard'];
+  isDropDown: boolean = false;
+
+  DropDownListTrue() {
+    this.isDropDown = true;
+  }
+
+  DropDownListFalse() {
+    this.isDropDown = false;
+  }
 }
