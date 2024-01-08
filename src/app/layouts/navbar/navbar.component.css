@@ -21,30 +21,32 @@ nav {
   cursor: pointer;
 }
 
-.logo-container p{
+.logo-container p {
   font-weight: 600;
 }
 
-.menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-.docs{
-    cursor: pointer;
+.docs,
+.dropdown-list p {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.docs:hover{
-  color: rgba(0, 0, 0, 0.4);
+.docs:hover {
+  color: var(--black-60);
 }
 
-.template{
-    display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    padding: 8px;
-    border-radius: 5px;
-    cursor: pointer;
+.template {
+  display: flex;
+  border: 1px solid var(--black-60);
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .arrow-down {
@@ -53,6 +55,21 @@ nav {
   margin-left: 2px;
 }
 
-hr{
-  border-color: rgba(0, 0, 0, 0.1);
+.dropdown-list {
+  border: 1px solid var(--black-60);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.dropdown-list p {
+  padding: 8px 16px;
+  text-transform: capitalize;
+}
+.dropdown-list p:hover {
+  background-color: var(--black-20);
+  border-radius: 5px;
+}
+
+hr {
+  border-color: var(--black-05);
 }

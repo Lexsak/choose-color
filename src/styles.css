@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+:root{
+  --black-60: rgba(0, 0, 0, 0.6);
+  --black-20: rgba(0, 0, 0, 0.2);
+  --black-05: rgba(0, 0, 0, 0.05);
+}
+
 * {
   margin: 0;
   padding: 0;
