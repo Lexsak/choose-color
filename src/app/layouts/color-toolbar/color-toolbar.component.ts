@@ -15,20 +15,53 @@ interface ColorPalettes {
 export class ColorToolbarComponent {
   color: string = '#808080';
 
+  // Colors from Toolbar
   constructor(private colorService: ColorService) {}
 
+  getTextColor() {
+    return this.colorService.textColor;
+  }
 
   getBackgroundColor() {
     return this.colorService.backgroundColor;
   }
 
-  getTextColor(){
-    return this.colorService.textColor;
-  };
+  getPrimaryColor() {
+    return this.colorService.primaryColor;
+  }
 
+  getSecondaryColor() {
+    return this.colorService.secondaryColor;
+  }
+
+  getAccentColor() {
+    return this.colorService.accentColor;
+  }
+
+  // Change Colors
   changeTextColor(event: any) {
     const color = event?.target?.value;
     this.colorService.setTextColor(color);
+  }
+
+  changeBackgroundColor(event: any) {
+    const color = event?.target?.value;
+    this.colorService.setBackgroundColor(color);
+  }
+
+  changePrimaryColor(event: any) {
+    const color = event?.target?.value;
+    this.colorService.setPrimaryColor(color);
+  }
+
+  changeSecondaryColor(event: any) {
+    const color = event?.target?.value;
+    this.colorService.setSecondaryColor(color);
+  }
+
+  changeAccentColor(event: any) {
+    const color = event?.target?.value;
+    this.colorService.setAccentColor(color);
   }
 
   // DropDown

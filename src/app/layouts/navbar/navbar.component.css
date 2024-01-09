@@ -3,6 +3,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 
 .container {
@@ -78,6 +79,3 @@ nav {
   border-radius: 5px;
 }
 
-hr {
-  border-color: var(--black-05);
-}

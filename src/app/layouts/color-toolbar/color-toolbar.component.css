@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  height: 66px;
+  height: 65px;
 }
 
 .colorContainer {
@@ -10,7 +10,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.05);
   padding: 8px;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 8px;
 }
 
@@ -38,11 +38,11 @@
 }
 
 /* Color Inputs Names  */
-.color-text::after {
+.text-color::after {
   content: "Text";
 }
 
-.second-color::after {
+.background-color::after {
   content: "Background";
 }
 

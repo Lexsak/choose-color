@@ -17,18 +17,18 @@ export class ColorService {
   }
 
   setBackgroundColor(color: string): void {
-    this.textColor = color;
+    this.backgroundColor = color;
   }
 
   setPrimaryColor(color: string): void {
-    this.textColor = color;
+    this.primaryColor = color;
   }
 
   setSecondaryColor(color: string): void {
-    this.textColor = color;
+    this.secondaryColor = color;
   }
 
   setAccentColor(color: string): void {
-    this.textColor = color;
+    this.accentColor = color;
   }
 }
