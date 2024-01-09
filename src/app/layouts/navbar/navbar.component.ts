@@ -22,7 +22,11 @@ export class NavbarComponent {
 
   constructor(private colorService: ColorService) {}
 
-  getBackgroundColor(){
+  getBackgroundColor() {
     return this.colorService.backgroundColor;
+  }
+
+  getTextColor(){
+    return this.colorService.textColor;
   };
 }
