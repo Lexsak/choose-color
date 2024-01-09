@@ -19,7 +19,6 @@ export class NavbarComponent {
   }
 
   // Colors from Toolbar
-
   constructor(private colorService: ColorService) {}
 
   getBackgroundColor() {

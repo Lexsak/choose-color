@@ -1,3 +1,36 @@
-<p>
-  color-toolbar works!
-</p>
+<div class="container">
+  <div class="colorContainer">
+
+    <!-- Color Inputs -->
+    <input
+      type="color"
+      class="btn-color color-text"
+      [value]="getTextColor()"
+      (input)="changeTextColor($event)"
+    />
+    
+    
+
+    <!-- DropDown -->
+    <div class="dropdown-container">
+      <div class="dropdown-text" (click)="changeDropDown()">
+        <p>Rozwin Menu</p>
+      </div>
+      <div class="dropdown-menu" *ngIf="isDropDown">
+        <div
+          *ngFor="let colorPalette of colorPalettes"
+          class="options"
+          (click)="changeColor(colorPalette.colors[0], colorPalette.colors[1])"
+        >
+          <p>{{ colorPalette.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown-container">
+      <div class="dropdown-text darkLight">
+        <p>Dark/Light</p>
+      </div>
+    </div>
+  </div>
+</div>

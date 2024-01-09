@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.colorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  gap: 2rem;
+  border-radius: 8px;
+}
+
+.btn-color {
+  padding: 0;
+  width: 150px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+.btn-color::after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-size: 19px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Color Inputs Names  */
+.color-text::after {
+  content: "Text";
+}
+
+.second-color::after {
+  content: "Background";
+}
+
+.accent-color::after {
+  content: "Accent";
+}
+.primary-color::after {
+  content: "Primary";
+}
+.secondary-color::after {
+  content: "Secondary";
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0; 
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 5px; 
+}
+
+/* DropDown */
+.dropdown-container {
+  position: relative;
+  background-color: white;
+}
+
+.dropdown-text {
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  padding: 8px 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  bottom: 100%; 
+  left: 0;
+  background-color: white;
+  color: black;
+  height: 100px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.options {
+  border: 1px solid black;
+  padding: 0px 16px;
+  cursor: pointer;
+}
+
+.darkLight{
+  background-color: black;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+.darkLight:hover{
+  background-color: white;
+  color: black;
+}
