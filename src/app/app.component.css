@@ -1,0 +1,11 @@
+.color-toolbar {
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 1000;
+}
