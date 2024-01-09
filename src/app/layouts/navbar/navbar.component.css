@@ -3,14 +3,15 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 
 .container {
-  width: 1120px;
+  width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0px;
+  padding: 8px 0px;
 }
 
 .logo-container {
@@ -46,7 +47,7 @@ nav {
 }
 .template {
   display: flex;
-  border: 1px solid var(--black-60);
+  border: 1px solid var(--black-20);
   padding: 8px 19.5px;
   border-radius: 5px;
   cursor: pointer;
@@ -61,7 +62,7 @@ nav {
 
 .dropdown-list {
   position: absolute;
-  border: 1px solid var(--black-60);
+  border: 1px solid var(--black-20);
   border-radius: 5px;
   padding: 4px;
   z-index: 1001;
@@ -74,10 +75,7 @@ nav {
   text-transform: capitalize;
 }
 .dropdown-list p:hover {
-  background-color: var(--black-20);
+  background-color: var(--black-05);
   border-radius: 5px;
 }
 
-hr {
-  border-color: var(--black-05);
-}

@@ -1,16 +1,16 @@
-<nav>
+<nav [style.background-color]="getBackgroundColor()">
   <div class="container">
     <div class="logo-container" routerLink="">
       <img src="../../../assets/logo.png" alt="logo" />
-      <p>Choose Colors</p>
+      <p [style.color]="getTextColor()">Choose Colors</p>
     </div>
     <div class="menu">
       <div class="docs">
-        <p>Docs</p>
+        <p [style.color]="getTextColor()">Docs</p>
       </div>
       <div class="template-container" (mouseenter)="DropDownListTrue()" (mouseleave)="DropDownListFalse()">
         <div class="template">
-          <p>Template</p>
+          <p [style.color]="getTextColor()">Template</p>
           <div>
             <svg
               class="arrow-down"
@@ -24,17 +24,16 @@
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 " />
+              <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/>
             </svg>
           </div>
         </div>
 
         <!-- Dropdown List -->
-        <div class="dropdown-list" *ngIf="isDropDown" >
-          <p *ngFor="let link of dropDownListLinks" routerLink="{{link}}">{{link}}</p>
+        <div class="dropdown-list" *ngIf="isDropDown" [style.background-color]="getBackgroundColor()">
+          <p *ngFor="let link of dropDownListLinks" routerLink="{{link}}" [style.color]="getTextColor()">{{link}}</p>
         </div>
       </div>
     </div>
   </div>
 </nav>
-<hr>

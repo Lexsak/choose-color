@@ -1,1 +1,61 @@
-<p>color-toolbar works!</p>
+<div class="container">
+  <div class="colorContainer">
+    <!-- Color Inputs -->
+    <input
+      type="color"
+      class="btn-color text-color"
+      [value]="getTextColor()"
+      (input)="changeTextColor($event)"
+    />
+
+    <input
+      type="color"
+      class="btn-color background-color"
+      [value]="getBackgroundColor()"
+      (input)="changeBackgroundColor($event)"
+    />
+
+    <input
+      type="color"
+      class="btn-color primary-color"
+      [value]="getPrimaryColor()"
+      (input)="changePrimaryColor($event)"
+    />
+
+    <input
+      type="color"
+      class="btn-color secondary-color"
+      [value]="getSecondaryColor()"
+      (input)="changeSecondaryColor($event)"
+    />
+
+    <input
+      type="color"
+      class="btn-color accent-color"
+      [value]="getAccentColor()"
+      (input)="changeAccentColor($event)"
+    />
+
+    <!-- DropDown -->
+    <div class="dropdown-container">
+      <div class="dropdown-text" (click)="changeDropDown()">
+        <img src="../../../assets/icons/color-palett.svg" alt="copy-icon" />
+      </div>
+      <div class="dropdown-menu" *ngIf="isDropDown">
+        <div
+          *ngFor="let colorPalette of colorPalettes"
+          class="options"
+          (click)="changeColor(colorPalette.colors[0], colorPalette.colors[1])"
+        >
+          <p>{{ colorPalette.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown-container">
+      <div class="dropdown-text">
+        <img src="../../../assets/icons/copy.svg" alt="copy-icon" />
+      </div>
+    </div>
+  </div>
+</div>

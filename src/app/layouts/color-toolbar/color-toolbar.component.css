@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 65px;
+}
+
+.colorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  gap: 1rem;
+  border-radius: 8px;
+}
+
+.btn-color {
+  padding: 0;
+  width: 150px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+.btn-color::after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-size: 19px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Color Inputs Names  */
+.text-color::after {
+  content: "Text";
+}
+
+.background-color::after {
+  content: "Background";
+}
+
+.accent-color::after {
+  content: "Accent";
+}
+.primary-color::after {
+  content: "Primary";
+}
+.secondary-color::after {
+  content: "Secondary";
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 5px;
+}
+
+/* DropDown */
+.dropdown-container {
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.dropdown-text {
+  color: black;
+}
+
+.dropdown-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  height: 100px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.options {
+  border: 1px solid black;
+  padding: 0px 16px;
+  cursor: pointer;
+}
