@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColorService } from 'src/app/color.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,4 +17,12 @@ export class NavbarComponent {
   DropDownListFalse() {
     this.isDropDown = false;
   }
+
+  // Colors from Toolbar
+
+  constructor(private colorService: ColorService) {}
+
+  getBackgroundColor(){
+    return this.colorService.backgroundColor;
+  };
 }

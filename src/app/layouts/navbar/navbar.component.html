@@ -1,4 +1,4 @@
-<nav>
+<nav [style.background-color]="getBackgroundColor()">
   <div class="container">
     <div class="logo-container" routerLink="">
       <img src="../../../assets/logo.png" alt="logo" />
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Dropdown List -->
-        <div class="dropdown-list" *ngIf="isDropDown" >
+        <div class="dropdown-list" *ngIf="isDropDown" [style.background-color]="getBackgroundColor()">
           <p *ngFor="let link of dropDownListLinks" routerLink="{{link}}">{{link}}</p>
         </div>
       </div>
