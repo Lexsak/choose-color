@@ -4,11 +4,9 @@
       <h1>
         Design with
         <span
-          [ngStyle]="{
-            background: gradient,
-            '-webkit-background-clip': 'text',
-            color: 'transparent'
-          }"
+          [ngStyle]="
+            getGradient()
+          "
           >Colors</span
         >
       </h1>
