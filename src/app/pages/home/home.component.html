@@ -1,7 +1,7 @@
 <div class="hero-container">
   <div class="hero-text">
     <div class="hero-tile">
-      <h1>
+      <h1 [style.color]="getTextColor()">
         Design with
         <span
           [ngStyle]="
@@ -10,15 +10,17 @@
           >Colors</span
         >
       </h1>
-      <h1>Your <span class="border-text">Way</span></h1>
+      <h1 [style.color]="getTextColor()">Your <span [ngStyle]="
+            getTextStroke()
+          " class="border-text">Way</span></h1>
     </div>
-    <p>
+    <p [style.color]="getTextColor()">
       Choosing colors for your website has never been this exciting! Take
       control with the Toolbar below and watch your design come alive.
     </p>
 
-    <div class="hero-btn">
-      <p>Get Started</p>
+    <div [style.background-color]="getPrimaryColor()" class="hero-btn">
+      <p [style.color]="getTextColor()">Get Started</p>
     </div>
   </div>
 

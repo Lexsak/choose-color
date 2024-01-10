@@ -36,4 +36,10 @@ export class HomeComponent {
       color: 'transparent',
     };
   }
+
+  getTextStroke(){
+    return {
+      '-webkit-text-stroke': `1.5px ${this.getTextColor()}`,
+    };
+  }
 }
