@@ -26,7 +26,7 @@ h1 {
   font-weight: bold;
   font-style: italic;
 }
-p {
+.hero-text p {
   color: var(--black-60);
   font-size: 16px;
   line-height: 40px;
@@ -207,7 +207,7 @@ p {
   height: 50%;
   gap: 24px;
 }
-.step h2{
+.step h2 {
   font-size: 40px;
   font-weight: 700;
 }
@@ -223,7 +223,38 @@ p {
   color: #000000;
 }
 
-.info-text{
+.info-text {
   margin-top: 4rem;
   text-align: center;
+}
+
+/* Simple Blocks */
+#simple-blocks-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 128px;
+}
+
+.icon-blocks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  margin: 64px 0px;
+}
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px;
+  text-align: center;
+  gap: 1rem;
+  background-color: rgba(146, 205, 223, 0.2);
+  border-radius: 12px;
+}
+.icon-block h2{
+  font-size: 32px;
+  font-weight: 600;
 }

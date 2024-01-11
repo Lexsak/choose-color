@@ -154,16 +154,16 @@
 </h2>
 
 <!-- Simple Blocks -->
-<h2>Get to Know Us Better</h2>
+<h2 id="simple-blocks-title">Get to Know Us Better</h2>
 
 <!-- Simple Blocks with icons -->
 <div class="icon-blocks">
-  <div class="icon-block">
+  <div class="icon-block" [style.background-color]="getRGBA(getSecondaryColor())">
     <svg
       id="Icons"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      height="24px"
+      height="40px"
       [style.fill]="getAccentColor()"
     >
       <path
@@ -175,17 +175,17 @@
         d="M20.94,10H16a4,4,0,0,1-4-4V1.06A3.683,3.683,0,0,0,11.34,1H6A3,3,0,0,0,3,4V20a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V10.66A3.683,3.683,0,0,0,20.94,10ZM7,14h4a1,1,0,0,1,0,2H7a1,1,0,0,1,0-2Zm10,6H7a1,1,0,0,1,0-2H17a1,1,0,0,1,0,2Z"
       />
     </svg>
-    <h2>Typography</h2>
-    <p>
+    <h2 [style.color]="getTextColor()">Typography</h2>
+    <p [style.color]="getTextColor()">
       Crafting messages with precision and style for effective communication.
     </p>
   </div>
 
-  <div class="icon-block">
+  <div class="icon-block" [style.background-color]="getRGBA(getSecondaryColor())">
     <svg
-      height="24"
+      height="40"
       viewBox="0 0 24 24"
-      width="24"
+      width="40"
       xmlns="http://www.w3.org/2000/svg"
       [style.fill]="getAccentColor()"
     >
@@ -193,13 +193,13 @@
         d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.897 5.516 5 6.934V22l5.34-4.004C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm-2.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
       />
     </svg>
-    <h2>Live Chat</h2>
-    <p>Real-time communication, instant support, and seamless collaboration.</p>
+    <h2 [style.color]="getTextColor()">Live Chat</h2>
+    <p [style.color]="getTextColor()">Real-time communication, instant support, and seamless collaboration.</p>
   </div>
 
-  <div class="icon-block">
+  <div class="icon-block" [style.background-color]="getRGBA(getSecondaryColor())">
     <svg
-      height="24"
+      height="40"
       id="Icons"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -210,8 +210,8 @@
         d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm3.707,14.707a1,1,0,0,1-1.414,0l-3-3A1,1,0,0,1,11,12V6a1,1,0,0,1,2,0v5.586l2.707,2.707A1,1,0,0,1,15.707,15.707Z"
       />
     </svg>
-    <h2>Timely Delivery</h2>
-    <p>
+    <h2 [style.color]="getTextColor()">Timely Delivery</h2>
+    <p [style.color]="getTextColor()">
       Meeting deadlines with efficiency and ensuring punctual project
       completion.
     </p>
