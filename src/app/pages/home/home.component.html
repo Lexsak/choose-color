@@ -3,16 +3,11 @@
     <div class="hero-tile">
       <h1 [style.color]="getTextColor()">
         Design with
-        <span
-          [ngStyle]="
-            getGradient()
-          "
-          >Colors</span
-        >
+        <span [ngStyle]="getGradient()">Colors</span>
       </h1>
-      <h1 [style.color]="getTextColor()">Your <span [ngStyle]="
-            getTextStroke()
-          " class="border-text">Way</span></h1>
+      <h1 [style.color]="getTextColor()">
+        Your <span [ngStyle]="getTextStroke()" class="border-text">Way</span>
+      </h1>
     </div>
     <p [style.color]="getTextColor()">
       Choosing colors for your website has never been this exciting! Take
@@ -38,12 +33,21 @@
         <div id="second-line1-blocks1"></div>
         <div id="second-line1-blocks2"></div>
       </div>
-      <div class="second-line2" [style.background-color]="getPrimaryColor()"></div>
+      <div
+        class="second-line2"
+        [style.background-color]="getPrimaryColor()"
+      ></div>
       <div class="second-line3-blocks">
         <div id="second-line3-blocks1"></div>
-        <div id="second-line3-blocks2" [style.background-color]="getSecondaryColor()"></div>
+        <div
+          id="second-line3-blocks2"
+          [style.background-color]="getSecondaryColor()"
+        ></div>
         <div id="second-line3-blocks3"></div>
-        <div id="second-line3-blocks4" [style.background-color]="getSecondaryColor()"></div>
+        <div
+          id="second-line3-blocks4"
+          [style.background-color]="getSecondaryColor()"
+        ></div>
       </div>
     </div>
 
@@ -55,3 +59,67 @@
     </div>
   </div>
 </div>
+
+<!-- How Does It Works -->
+
+<div class="explore-container">
+  <div class="explore-steps">
+    <!-- Explore Text -->
+    <div class="explore-text">
+      <h2>
+        Explore the World of <br />
+        Colors
+      </h2>
+      <p>
+        This platform is designed to simplify the process of choosing colors
+        when building websites.
+      </p>
+    </div>
+
+    <!-- Explore 1-3 steps -->
+    <div class="steps">
+      <div class="step">
+        <h2>1</h2>
+        <p>
+          Begin with two neutral colors one for text and another for the
+          background.
+        </p>
+      </div>
+      <div class="step">
+        <h2>3</h2>
+        <p>
+          Incorporate an accent color for additional flair. This color will
+          appear in images, highlights, hyperlinks, boxes, cards, and more.
+        </p>
+      </div>
+    </div>
+    <!-- Explore 2-4 steps -->
+    <div class="steps">
+      <div class="step">
+        <h2>2</h2>
+        <p>
+          Select your primary and secondary colors. The primary color is for
+          main CTAs and sections, while the secondary color is ideal for less
+          prominent elements like buttons and info cards.
+        </p>
+      </div>
+      <div class="step">
+        <h2>4</h2>
+        <p>
+          Pleased with the results? Hit "Copy" and choose from various options
+          to export your personalized color palette.
+        </p>
+      </div>
+    </div>
+  </div>
+  <p>
+    If you're not sure what colors to choose, check out the ones I've added for
+    inspiration in the toolbar. For more examples, visit the "Templates" in the
+    navbar.
+  </p>
+</div>
+
+<h2 class="info-text">
+  Everything below is just a concept and serves as an example. The tool is 100%
+  free to use!
+</h2>
