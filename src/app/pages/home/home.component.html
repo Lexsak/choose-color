@@ -25,6 +25,33 @@
   </div>
 
   <div class="hero-blocks">
-    <div>Big Blokensy tu beda</div>
+    <!-- first line blocks -->
+    <div class="first-line">
+      <div id="first-line1"></div>
+      <div id="first-line2"></div>
+      <div id="first-line3"></div>
+    </div>
+
+    <!-- second line blocks -->
+    <div class="second-line">
+      <div class="second-line1-blocks">
+        <div id="second-line1-blocks1"></div>
+        <div id="second-line1-blocks2"></div>
+      </div>
+      <div class="second-line2" [style.background-color]="getPrimaryColor()"></div>
+      <div class="second-line3-blocks">
+        <div id="second-line3-blocks1"></div>
+        <div id="second-line3-blocks2" [style.background-color]="getSecondaryColor()"></div>
+        <div id="second-line3-blocks3"></div>
+        <div id="second-line3-blocks4" [style.background-color]="getSecondaryColor()"></div>
+      </div>
+    </div>
+
+    <!-- third line blocks -->
+    <div class="third-line">
+      <div id="third-line1" [style.background-color]="getTextColor()"></div>
+      <div id="third-line2"></div>
+      <div id="third-line3" [style.background-color]="getAccentColor()"></div>
+    </div>
   </div>
 </div>
