@@ -167,3 +167,62 @@ p {
   width: 30%;
   border-radius: 8px;
 }
+
+/* How Does It Works  */
+
+.explore-container {
+  background-color: rgba(146, 205, 223, 0.2);
+  width: 100%;
+  padding: 24px 48px;
+  border-radius: 12px;
+}
+
+.explore-steps {
+  display: flex;
+  gap: 3rem;
+}
+
+.explore-text {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 1rem;
+}
+.explore-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.explore-text p {
+  color: #000000;
+  line-height: 1.5rem;
+}
+
+.steps {
+  width: 30%;
+  height: 320px;
+}
+.step {
+  display: flex;
+  height: 50%;
+  gap: 24px;
+}
+.step h2{
+  font-size: 40px;
+  font-weight: 700;
+}
+.step p {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #000000;
+  line-height: normal;
+}
+
+.info-paragraph {
+  margin-top: 2rem;
+  color: #000000;
+}
+
+.info-text{
+  margin-top: 4rem;
+  text-align: center;
+}
