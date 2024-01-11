@@ -219,13 +219,13 @@
 </div>
 
 <!-- Information tiles -->
-<div class="tiles-container">
-  <div class="first-tiles">
-    <div id="clients">100K+ Satisfied Clients</div>
-    <div id="awards">Industry Awards 20+</div>
+<div class="information-tiles">
+  <div class="tiles-container">
+    <div id="clients" [style.background-color]="getPrimaryColor()" [style.color]="getBackgroundColor()">100K+ Satisfied Clients</div>
+    <div id="awards" [style.background-color]="getSecondaryColor()" [style.color]="getBackgroundColor()">Industry Awards 20+</div>
   </div>
-  <div class="second-tiles">
-    <div id="years">10+ Years of Experience</div>
-    <div id="team">5000+ Skilled Team Members</div>
+  <div class="tiles-container">
+    <div id="years" [style.background-color]="getTextColor()" [style.color]="getBackgroundColor()">10+ Years of Experience</div>
+    <div id="team" [style.background-color]="getAccentColor()" [style.color]="getBackgroundColor()">5000+ Skilled Team Members</div>
   </div>
 </div>
