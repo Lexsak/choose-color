@@ -44,8 +44,6 @@ export class HomeComponent {
   }
 
   getRGBA(color: string) {
-    
-
     const rgbaColor = this.hexOrRgbToRgba(color, 0.2);
 
     return rgbaColor;
@@ -72,5 +70,22 @@ export class HomeComponent {
 
     // Jeśli kolor nie jest ani w formie HEX, ani RGB, zwróć oryginalny kolor
     return color;
+  }
+
+  // Pricing Section
+  pricingIsTrue: boolean = true;
+  pricingPro: number = 20;
+  pricingBusiness: number = 100;
+
+  isMonthly() {
+    this.pricingIsTrue = true;
+    this.pricingPro = 20;
+    this.pricingBusiness = 100;
+  }
+
+  isYearly() {
+    this.pricingIsTrue = false;
+    this.pricingPro = 220;
+    this.pricingBusiness = 1100;
   }
 }

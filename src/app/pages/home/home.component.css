@@ -303,3 +303,15 @@ h1 {
   width: 45%;
   font-size: 28px;
 }
+
+
+
+/* Pricing Section */
+.pricing-btns .btn {
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.pricing-btns .active {
+  background-color: red;
+}
