@@ -66,7 +66,11 @@ export class ColorToolbarComponent {
 
   // DropDown
   colorPalettes: ColorPalettes[] = [
-    { id: 1, name: 'Mono', colors: ['#ffffff', '#dddddd'] },
+    {
+      id: 1,
+      name: 'Mono',
+      colors: ['#0b0a06', '#f9f8f4', '#a79d5b', '#9dcabc', '#7da6b9'],
+    },
     { id: 2, name: 'Nono', colors: ['#000000', '#ffffff'] },
     { id: 3, name: 'Hono', colors: ['asfas', 'asfasf'] },
     { id: 4, name: 'Bono', colors: ['asfas', 'asfasf'] },
@@ -91,9 +95,12 @@ export class ColorToolbarComponent {
     this.isDropDown = !this.isDropDown;
   }
 
-  changeColor(hax1: string, hax2: string) {
+  changeColor(hax1: string, hax2: string, hax3: string, hax4: string, hax5: string) {
     this.colorService.setTextColor(hax1);
-    this.colorService.setSecondaryColor(hax2);
+    this.colorService.setBackgroundColor(hax2);
+    this.colorService.setPrimaryColor(hax3);
+    this.colorService.setSecondaryColor(hax4);
+    this.colorService.setAccentColor(hax5);
     this.isDropDown = false;
   }
 }
