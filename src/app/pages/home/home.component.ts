@@ -43,8 +43,9 @@ export class HomeComponent {
     };
   }
 
-  getRGBA(color: string) {
-    const rgbaColor = this.hexOrRgbToRgba(color, 0.2);
+  getRGBA(color: string, alpha: string) {
+    const alphaNumber = parseFloat(alpha)
+    const rgbaColor = this.hexOrRgbToRgba(color, alphaNumber);
 
     return rgbaColor;
   }

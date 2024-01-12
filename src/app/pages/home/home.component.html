@@ -14,7 +14,7 @@
       control with the Toolbar below and watch your design come alive.
     </p>
 
-    <div [style.background-color]="getPrimaryColor()" class="hero-btn">
+    <div [style.background-color]="getAccentColor()" class="hero-btn">
       <p [style.color]="getTextColor()">Get Started</p>
     </div>
   </div>
@@ -64,7 +64,7 @@
 
 <div
   class="explore-container"
-  [style.background-color]="getRGBA(getSecondaryColor())"
+  [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
 >
   <div class="explore-steps">
     <!-- Explore Text -->
@@ -158,7 +158,10 @@
 
 <!-- Simple Blocks with icons -->
 <div class="icon-blocks">
-  <div class="icon-block" [style.background-color]="getRGBA(getSecondaryColor())">
+  <div
+    class="icon-block"
+    [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+  >
     <svg
       id="Icons"
       viewBox="0 0 24 24"
@@ -181,7 +184,10 @@
     </p>
   </div>
 
-  <div class="icon-block" [style.background-color]="getRGBA(getSecondaryColor())">
+  <div
+    class="icon-block"
+    [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+  >
     <svg
       height="40"
       viewBox="0 0 24 24"
@@ -194,10 +200,15 @@
       />
     </svg>
     <h2 [style.color]="getTextColor()">Live Chat</h2>
-    <p [style.color]="getTextColor()">Real-time communication, instant support, and seamless collaboration.</p>
+    <p [style.color]="getTextColor()">
+      Real-time communication, instant support, and seamless collaboration.
+    </p>
   </div>
 
-  <div class="icon-block" [style.background-color]="getRGBA(getSecondaryColor())">
+  <div
+    class="icon-block"
+    [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+  >
     <svg
       height="40"
       id="Icons"
@@ -221,58 +232,110 @@
 <!-- Information tiles -->
 <div class="information-tiles">
   <div class="tiles-container">
-    <div id="clients" [style.background-color]="getPrimaryColor()" [style.color]="getBackgroundColor()">100K+ Satisfied Clients</div>
-    <div id="awards" [style.background-color]="getSecondaryColor()" [style.color]="getBackgroundColor()">Industry Awards 20+</div>
+    <div
+      id="clients"
+      [style.background-color]="getPrimaryColor()"
+      [style.color]="getBackgroundColor()"
+    >
+      100K+ Satisfied Clients
+    </div>
+    <div
+      id="awards"
+      [style.background-color]="getSecondaryColor()"
+      [style.color]="getBackgroundColor()"
+    >
+      Industry Awards 20+
+    </div>
   </div>
   <div class="tiles-container">
-    <div id="years" [style.background-color]="getTextColor()" [style.color]="getBackgroundColor()">10+ Years of Experience</div>
-    <div id="team" [style.background-color]="getAccentColor()" [style.color]="getBackgroundColor()">5000+ Skilled Team Members</div>
+    <div
+      id="years"
+      [style.background-color]="getTextColor()"
+      [style.color]="getBackgroundColor()"
+    >
+      10+ Years of Experience
+    </div>
+    <div
+      id="team"
+      [style.background-color]="getAccentColor()"
+      [style.color]="getBackgroundColor()"
+    >
+      5000+ Skilled Team Members
+    </div>
   </div>
 </div>
 
-
 <!-- Pricing Section -->
 <div class="pricing-container">
-  <h2 class="pricing-title">We offer great <span>price</span> plan for the application</h2>
-  <div class="pricing-btns">
-    <p class="btn" [ngClass]="{'active':pricingIsTrue}" (click)="isMonthly()">Monthly</p>
-    <p class="btn" [ngClass]="{'active':!pricingIsTrue}" (click)="isYearly()">Yearly</p>
+  <h2 class="pricing-title" [style.color]="getTextColor()">
+    We offer great <span [ngStyle]="getGradient()">price</span> plan for the application
+  </h2>
+  <div class="pricing-btns" [style.border-color]="getTextColor()">
+    <p
+      class="btn"
+      [ngClass]="{ active: pricingIsTrue }"
+      (click)="isMonthly()"
+      [style.background-color]="
+        pricingIsTrue ? getPrimaryColor() : 'transparent'
+      "
+      [style.color]="getTextColor()"
+    >
+      Monthly
+    </p>
+    <p
+      class="btn"
+      [ngClass]="{ active: !pricingIsTrue }"
+      (click)="isYearly()"
+      [style.background-color]="
+        !pricingIsTrue ? getPrimaryColor() : 'transparent'
+      "
+      [style.color]="getTextColor()"
+    >
+      Yearly
+    </p>
   </div>
 
   <div class="pricing-options">
     <!-- Starter -->
-    <div class="option">
+    <div class="option" [style.border-color]="getTextColor()">
       <div class="option-text">
-        <h3>Starter</h3>
-        <p>Starter pack to help you get started and learn the basics</p>
+        <h3 [style.color]="getTextColor()">Starter</h3>
+        <p [style.color]="getTextColor()">Starter pack to help you get started and learn the basics</p>
       </div>
-      <h2><span>Free</span></h2>
+      <h2 [style.color]="getTextColor()"><span>Free</span></h2>
 
-      <p class="option-btn">Get Started</p>
+      <p class="option-btn" [style.color]="getTextColor()" [style.border-color]="getTextColor()">Get Started</p>
     </div>
 
     <!-- Pro -->
-    <div class="option recommended">
+    <div class="option recommended" [style.background-color]="getRGBA(getSecondaryColor(), '0.2')">
       <div class="option-text">
-        <h3>Pro</h3>
-        <p>More power for small teams create project plans with confidence</p>
+        <h3 [style.color]="getTextColor()">Pro</h3>
+        <p [style.color]="getTextColor()">More power for small teams create project plans with confidence</p>
       </div>
-      <h2>$<span>{{pricingPro}}</span> / {{pricingIsTrue ? 'month' : 'year'}}</h2>
+      <h2 [style.color]="getTextColor()">
+        $<span>{{ pricingPro }}</span> / {{ pricingIsTrue ? "month" : "year" }}
+      </h2>
 
-      <p class="option-btn">Get Started</p>
+      <p class="option-btn" [style.color]="getTextColor()" [style.background-color]="getPrimaryColor()">Get Started</p>
+      <div class="recommended-info" [style.background-color]="getPrimaryColor()" [style.color]="getTextColor()">Recommended</div>
     </div>
-
 
     <!-- Business+ -->
-    <div class="option">
+    <div class="option" [style.border-color]="getTextColor()">
       <div class="option-text">
-        <h3>Business+</h3>
-        <p>For companies that need to manage work happening across multiple teams.</p>
+        <h3 [style.color]="getTextColor()">Business+</h3>
+        <p [style.color]="getTextColor()">
+          For companies that need to manage work happening across multiple
+          teams.
+        </p>
       </div>
-      <h2>$<span>{{pricingBusiness}}</span> / {{pricingIsTrue ? 'month' : 'year'}}</h2>
+      <h2 [style.color]="getTextColor()">
+        $<span>{{ pricingBusiness }}</span> /
+        {{ pricingIsTrue ? "month" : "year" }}
+      </h2>
 
-      <p class="option-btn">Get Started</p>
+      <p class="option-btn" [style.color]="getTextColor()" [style.border-color]="getTextColor()">Get Started</p>
     </div>
-
   </div>
 </div>

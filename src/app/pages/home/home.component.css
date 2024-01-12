@@ -324,7 +324,7 @@ h1 {
 .pricing-btns {
   display: flex;
   padding: 8px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 25px;
 }
 .btn {
@@ -389,8 +389,7 @@ h1 {
   color: white;
 }
 
-.recommended::after {
-  content: "Recommended";
+.recommended-info {
   position: absolute;
   width: 75%;
   top: 0; /* Adjust the top value to position it appropriately */
