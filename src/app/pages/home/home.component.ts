@@ -89,4 +89,6 @@ export class HomeComponent {
     this.pricingPro = 220;
     this.pricingBusiness = 1100;
   }
+
+  
 }
