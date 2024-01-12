@@ -14,7 +14,7 @@
       control with the Toolbar below and watch your design come alive.
     </p>
 
-    <div [style.background-color]="getAccentColor()" class="hero-btn">
+    <div [style.background-color]="getPrimaryColor()" class="hero-btn">
       <p [style.color]="getTextColor()">Get Started</p>
     </div>
   </div>
@@ -154,7 +154,7 @@
 </h2>
 
 <!-- Simple Blocks -->
-<h2 id="simple-blocks-title">Get to Know Us Better</h2>
+<h2 id="simple-blocks-title" [style.color]="getTextColor()">Get to Know Us Better</h2>
 
 <!-- Simple Blocks with icons -->
 <div class="icon-blocks">
@@ -375,30 +375,39 @@
 <!-- Testimonials -->
 <div class="testimonials-container">
   <div class="testimonials-title">
-    <h2>Testimonials</h2>
-    <p>What our clients say about us</p>
+    <hr [style.border-color]="getAccentColor()" />
+    <h2 [style.color]="getTextColor()">Testimonials</h2>
+    <p>[style.color]="getTextColor()"What our clients say about us</p>
   </div>
 
   <div class="testimonials">
-    <div class="opinion">
-      <q
-        >“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
-        tortor donec ipsum consequat semper.”</q
+    <div
+      class="opinion"
+      [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+    >
+      <q [style.color]="getTextColor()"
+        >Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+        tortor donec ipsum consequat semper.</q
       >
       <div class="profile">
-        <div class="profile-img"></div>
+        <div
+          class="profile-img"
+          [style.border-color]="getTextColor()"
+          [style.background-color]="getPrimaryColor()"
+        ></div>
         <div class="profile-text">
-          <h4>Franklin Clinton</h4>
-          <p>Designer</p>
+          <h4 [style.color]="getTextColor()">Franklin Clinton</h4>
+          <p [style.color]="getTextColor()">Designer</p>
         </div>
         <svg
-        *ngFor="let i of [1, 2, 3, 4, 5]"
+        [style.fill]="getTextColor()"
+          *ngFor="let i of [1, 2, 3, 4, 5]"
           baseProfile="tiny"
-          height="24px"
+          height="32px"
           id="Layer_1"
           version="1.2"
           viewBox="0 0 24 24"
-          width="24px"
+          width="32px"
           xml:space="preserve"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -414,25 +423,33 @@
       </div>
     </div>
 
-    <div class="opinion">
-      <q
-        >“Ut tristique viverra sed porttitor senectus. A facilisis metus pretium
-        ut habitant lorem.”</q
+    <div
+      class="opinion"
+      [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+    >
+      <q [style.color]="getTextColor()"
+        >Ut tristique viverra sed porttitor senectus. A facilisis metus pretium
+        ut habitant lorem semper consequat.</q
       >
       <div class="profile">
-        <div class="profile-img"></div>
+        <div
+          class="profile-img"
+          [style.border-color]="getTextColor()"
+          [style.background-color]="getAccentColor()"
+        ></div>
         <div class="profile-text">
-          <h4>Michael De Santa</h4>
-          <p>Developer</p>
+          <h4 [style.color]="getTextColor()">Michael De Santa</h4>
+          <p [style.color]="getTextColor()">Developer</p>
         </div>
         <svg
-          *ngFor="let i of [1, 2, 3]"
+        [style.fill]="getTextColor()"
+          *ngFor="let i of [1, 2, 3, 4]"
           baseProfile="tiny"
-          height="24px"
+          height="32px"
           id="Layer_1"
           version="1.2"
           viewBox="0 0 24 24"
-          width="24px"
+          width="32px"
           xml:space="preserve"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
