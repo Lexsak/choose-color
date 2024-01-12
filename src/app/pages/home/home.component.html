@@ -22,16 +22,16 @@
   <div class="hero-blocks">
     <!-- first line blocks -->
     <div class="first-line">
-      <div id="first-line1"></div>
+      <div id="first-line1" [style.background-color]="getRGBA(getTextColor(), '0.1')"></div>
       <div id="first-line2"></div>
-      <div id="first-line3"></div>
+      <div id="first-line3" [style.background-color]="getRGBA(getTextColor(), '0.1')"></div>
     </div>
 
     <!-- second line blocks -->
     <div class="second-line">
       <div class="second-line1-blocks">
         <div id="second-line1-blocks1"></div>
-        <div id="second-line1-blocks2"></div>
+        <div id="second-line1-blocks2" [style.background-color]="getRGBA(getTextColor(), '0.1')"></div>
       </div>
       <div
         class="second-line2"
@@ -377,7 +377,7 @@
   <div class="testimonials-title">
     <hr [style.border-color]="getAccentColor()" />
     <h2 [style.color]="getTextColor()">Testimonials</h2>
-    <p>[style.color]="getTextColor()"What our clients say about us</p>
+    <p [style.color]="getTextColor()">What our clients say about us</p>
   </div>
 
   <div class="testimonials">

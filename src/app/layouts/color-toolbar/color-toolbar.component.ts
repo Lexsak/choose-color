@@ -68,13 +68,29 @@ export class ColorToolbarComponent {
   colorPalettes: ColorPalettes[] = [
     {
       id: 1,
-      name: 'Mono',
+      name: 'Blue',
+      colors: ['#e7f3f1', '#091715', '#98e5db', '#189a8a', '#18efd4'],
+    },
+    {
+      id: 2,
+      name: 'Yellow Dark',
       colors: ['#0b0a06', '#f9f8f4', '#a79d5b', '#9dcabc', '#7da6b9'],
     },
-    { id: 2, name: 'Nono', colors: ['#000000', '#ffffff'] },
-    { id: 3, name: 'Hono', colors: ['asfas', 'asfasf'] },
-    { id: 4, name: 'Bono', colors: ['asfas', 'asfasf'] },
-    { id: 5, name: 'Cono', colors: ['asfas', 'asfasf'] },
+    {
+      id: 3,
+      name: 'Pink',
+      colors: ['#fce3f7', '#1d0318', '#f383d1', '#930f10', '#ea6c2d'],
+    },
+    {
+      id: 4,
+      name: 'Purple',
+      colors: ['#eae7f7', '#07050f', '#a69ede', '#642876', '#c553c5'],
+    },
+    {
+      id: 5,
+      name: 'Green',
+      colors: ['#f0f5e8', '#141a0b', '#c1d8a4', '#3e7532', '#56b554'],
+    },
   ];
 
   isDropDown: boolean = false;
@@ -95,7 +111,13 @@ export class ColorToolbarComponent {
     this.isDropDown = !this.isDropDown;
   }
 
-  changeColor(hax1: string, hax2: string, hax3: string, hax4: string, hax5: string) {
+  changeColor(
+    hax1: string,
+    hax2: string,
+    hax3: string,
+    hax4: string,
+    hax5: string
+  ) {
     this.colorService.setTextColor(hax1);
     this.colorService.setBackgroundColor(hax2);
     this.colorService.setPrimaryColor(hax3);
