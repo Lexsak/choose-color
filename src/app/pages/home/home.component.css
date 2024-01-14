@@ -499,5 +499,12 @@ h1 {
   font-weight: 600;
   font-size: 24px;
 }
+.question svg{
+  transition: all .3s ease-in-out;
+}
+.question .active{
+  transform: rotate(45deg);
+}
+
 
 
