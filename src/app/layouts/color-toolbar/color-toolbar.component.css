@@ -84,17 +84,33 @@ input[type="color"]::-webkit-color-swatch {
 
 .dropdown-menu {
   position: absolute;
-  bottom: 100%;
-  left: 0;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: white;
   color: black;
-  height: 100px;
-  width: 100%;
-  overflow-y: scroll;
+  height: 330px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 16px;
+  gap: 1rem;
 }
 
 .options {
-  border: 1px solid black;
-  padding: 0px 16px;
+  padding: 4px 16px;
+  font-size: 14px;
   cursor: pointer;
+  width: 100%;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 4px;
+}
+
+
+.options.active {
+  background-color: black;
+  color: white; 
 }

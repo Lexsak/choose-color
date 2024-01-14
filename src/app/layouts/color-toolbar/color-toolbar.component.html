@@ -69,13 +69,15 @@
         <div
           *ngFor="let colorPalette of colorPalettes"
           class="options"
+          [class.active]="colorPalette === activeColorPalette"
           (click)="
             changeColor(
               colorPalette.colors[0],
               colorPalette.colors[1],
               colorPalette.colors[2],
               colorPalette.colors[3],
-              colorPalette.colors[4]
+              colorPalette.colors[4],
+              colorPalette
             )
           "
         >
