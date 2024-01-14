@@ -44,7 +44,7 @@ export class HomeComponent {
   }
 
   getRGBA(color: string, alpha: string) {
-    const alphaNumber = parseFloat(alpha)
+    const alphaNumber = parseFloat(alpha);
     const rgbaColor = this.hexOrRgbToRgba(color, alphaNumber);
 
     return rgbaColor;
@@ -90,10 +90,36 @@ export class HomeComponent {
     this.pricingBusiness = 1100;
   }
 
-  
-
-
   // FAQ
+  faqList = [
+    {
+      title: 'Can I cancel my subscription at any time?',
+      answer: `Yes, you can easily cancel your subscription anytime through your account settings. For step-by-step guidance, check the 'Subscription' section. Have questions or need assistance? Contact our support in the 'Contact' section.`,
+      showAnswer: false,
+    },
+    {
+      title: 'Do you provide free product samples?',
+      answer: `Nullam volutpat lobortis imperdiet. Praesent in ex vitae tellus accumsan accumsan. Nunc iaculis magna lacus, sit amet pretium risus vehicula sit amet.`,
+      showAnswer: false,
+    },
+    {
+      title: 'What payment methods do you accept?',
+      answer: `Urabitur scelerisque sollicitudin elit nec euismod. Sed tincidunt blandit nibh a facilisis. Aliquam pulvinar eros id augue vulputate, id feugiat mi euismod. Morbi congue vehicula felis, `,
+      showAnswer: false,
+    },
+    {
+      title: 'How do I track my order?',
+      answer: `Sed lorem nunc, fringilla sit amet ligula eu, dapibus sollicitudin nunc. Nunc in massa quis odio sollicitudin tempus id nec ipsum. Fusce venenatis, est vel rhoncus tincidunt, mauris ante posuere risus, iaculis sollicitudin odio eros sed magna. In maximus lobortis erat ullamcorper tempus. Donec ullamcorper turpis felis, sagittis efficitur elit ornare vitae.`,
+      showAnswer: false,
+    },
+    {
+      title: 'Is there a warranty for your products?',
+      answer: `Duis laoreet nibh ut porta posuere. Mauris pharetra tincidunt arcu, sed placerat massa gravida at. Suspendisse iaculis, nunc ut fringilla placerat, ligula orci ullamcorper quam, eu luctus neque eros sit amet est. Curabitur id vulputate leo.`,
+      showAnswer: false,
+    },
+  ];
 
-  
+  toggleAnswer(question: any){
+     question.showAnswer = !question.showAnswer;
+  };
 }

@@ -482,8 +482,8 @@
 
 <div class="faq-container">
   <div class="faq-title">
-    <h2>FAQ</h2>
-    <p>
+    <h2 [style.color]="getTextColor()">FAQ</h2>
+    <p [style.color]="getTextColor()">
       Explore solutions to common inquiries. For additional questions or
       personalized assistance, head to our 'Contact'. We're here to help!
     </p>
@@ -493,10 +493,13 @@
     <div
       class="question-container"
       [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+      *ngFor="let question of faqList"
+      (click)="toggleAnswer(question)"
     >
       <div class="question">
-        <h2>Can I cancel my subscription at any time?</h2>
+        <h2 [style.color]="getTextColor()">{{ question.title }}</h2>
         <svg
+          [style.fill]="getTextColor()"
           height="32px"
           id="Layer_1"
           style="enable-background: new 0 0 32 32"
@@ -512,12 +515,9 @@
           />
         </svg>
       </div>
-      <div class="answer">
-        <p>
-          Yes, you can easily cancel your subscription anytime through your
-          account settings. For step-by-step guidance, check the 'Subscription'
-          section. Have questions or need assistance? Contact our support in the
-          'Contact' section.
+      <div class="answer" *ngIf="question.showAnswer">
+        <p [style.color]="getTextColor()">
+          {{ question.answer }}
         </p>
       </div>
     </div>
