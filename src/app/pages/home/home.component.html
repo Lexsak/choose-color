@@ -22,16 +22,25 @@
   <div class="hero-blocks">
     <!-- first line blocks -->
     <div class="first-line">
-      <div id="first-line1" [style.background-color]="getRGBA(getTextColor(), '0.1')"></div>
+      <div
+        id="first-line1"
+        [style.background-color]="getRGBA(getTextColor(), '0.1')"
+      ></div>
       <div id="first-line2"></div>
-      <div id="first-line3" [style.background-color]="getRGBA(getTextColor(), '0.1')"></div>
+      <div
+        id="first-line3"
+        [style.background-color]="getRGBA(getTextColor(), '0.1')"
+      ></div>
     </div>
 
     <!-- second line blocks -->
     <div class="second-line">
       <div class="second-line1-blocks">
         <div id="second-line1-blocks1"></div>
-        <div id="second-line1-blocks2" [style.background-color]="getRGBA(getTextColor(), '0.1')"></div>
+        <div
+          id="second-line1-blocks2"
+          [style.background-color]="getRGBA(getTextColor(), '0.1')"
+        ></div>
       </div>
       <div
         class="second-line2"
@@ -154,7 +163,9 @@
 </h2>
 
 <!-- Simple Blocks -->
-<h2 id="simple-blocks-title" [style.color]="getTextColor()">Get to Know Us Better</h2>
+<h2 id="simple-blocks-title" [style.color]="getTextColor()">
+  Get to Know Us Better
+</h2>
 
 <!-- Simple Blocks with icons -->
 <div class="icon-blocks">
@@ -400,7 +411,7 @@
           <p [style.color]="getTextColor()">Designer</p>
         </div>
         <svg
-        [style.fill]="getTextColor()"
+          [style.fill]="getTextColor()"
           *ngFor="let i of [1, 2, 3, 4, 5]"
           baseProfile="tiny"
           height="32px"
@@ -442,7 +453,7 @@
           <p [style.color]="getTextColor()">Developer</p>
         </div>
         <svg
-        [style.fill]="getTextColor()"
+          [style.fill]="getTextColor()"
           *ngFor="let i of [1, 2, 3, 4]"
           baseProfile="tiny"
           height="32px"
@@ -462,6 +473,52 @@
             </g>
           </g>
         </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+
+<div class="faq-container">
+  <div class="faq-title">
+    <h2>FAQ</h2>
+    <p>
+      Explore solutions to common inquiries. For additional questions or
+      personalized assistance, head to our 'Contact'. We're here to help!
+    </p>
+  </div>
+
+  <div class="faq-questions">
+    <div
+      class="question-container"
+      [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+    >
+      <div class="question">
+        <h2>Can I cancel my subscription at any time?</h2>
+        <svg
+          height="32px"
+          id="Layer_1"
+          style="enable-background: new 0 0 32 32"
+          version="1.1"
+          viewBox="0 0 32 32"
+          width="32px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"
+          />
+        </svg>
+      </div>
+      <div class="answer">
+        <p>
+          Yes, you can easily cancel your subscription anytime through your
+          account settings. For step-by-step guidance, check the 'Subscription'
+          section. Have questions or need assistance? Contact our support in the
+          'Contact' section.
+        </p>
       </div>
     </div>
   </div>
