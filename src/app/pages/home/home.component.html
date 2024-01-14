@@ -483,7 +483,7 @@
 <div class="faq-container">
   <div class="faq-title">
     <h2 [style.color]="getTextColor()">FAQ</h2>
-    <p [style.color]="getTextColor()">
+    <p [style.color]="getRGBA(getTextColor(), '0.6')">
       Explore solutions to common inquiries. For additional questions or
       personalized assistance, head to our 'Contact'. We're here to help!
     </p>
@@ -509,7 +509,7 @@
           xml:space="preserve"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          [ngClass]="{ active: question.showAnswer}"
+          [ngClass]="{ active: question.showAnswer }"
         >
           <path
             d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"
@@ -522,5 +522,43 @@
         </p>
       </div>
     </div>
+  </div>
+</div>
+
+
+
+
+<!-- More section -->
+<div class="more-container">
+  <div class="more-title">
+    <h2 [style.color]="getTextColor()">
+      discover more <span [ngStyle]="getGradient()">templates</span>
+    </h2>
+    <p [style.color]="getRGBA(getTextColor(), '0.6')">
+      Just a few more templates to test your color palette
+    </p>
+  </div>
+  <div class="more-templates">
+    <p
+      [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+      [style.color]="getTextColor()"
+      routerLink="blog"
+    >
+      Blog
+    </p>
+    <p
+      [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+      [style.color]="getTextColor()"
+      routerLink="dashboard"
+    >
+      Dashboard
+    </p>
+    <p
+      [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
+      [style.color]="getTextColor()"
+      routerLink="more"
+    >
+      More
+    </p>
   </div>
 </div>
