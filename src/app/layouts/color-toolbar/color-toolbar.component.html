@@ -37,8 +37,8 @@
     />
 
     <!-- DropDown -->
-    <div class="dropdown-container">
-      <div class="dropdown-text" (click)="changeDropDown()">
+    <div class="dropdown-container"(click)="changeDropDown()">
+      <div class="dropdown-text" >
         <svg
           enable-background="new 0 0 48 48"
           height="32px"
@@ -86,9 +86,12 @@
       </div>
     </div>
 
-    <div class="dropdown-container">
-      <div class="dropdown-text">
+    <div class="dropdown-container" (click)="changeCopy()">
+      <div class="dropdown-text" >
         <img src="../../../assets/icons/copy.svg" alt="copy-icon" />
+      </div>
+      <div class="dropdown-menu" *ngIf="isCopy">
+        
       </div>
     </div>
   </div>

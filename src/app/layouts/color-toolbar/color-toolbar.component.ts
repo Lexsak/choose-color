@@ -99,7 +99,7 @@ export class ColorToolbarComponent implements OnInit {
     },
   ];
 
-  isDropDown: boolean = true;
+  isDropDown: boolean = false;
   activeColorPalette: ColorPalettes | null = null;
 
   @HostListener('document:click', ['$event'])
@@ -139,5 +139,12 @@ export class ColorToolbarComponent implements OnInit {
     this.colorService.setSecondaryColor(hax4);
     this.colorService.setAccentColor(hax5);
     this.isDropDown = false;
+  }
+
+  // Copy
+
+  isCopy: boolean = false;
+  changeCopy(){
+     this.isCopy = !this.isCopy;
   }
 }
