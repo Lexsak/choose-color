@@ -115,6 +115,7 @@ export class ColorToolbarComponent implements OnInit {
       // Sprawdź czy kliknięcie nie nastąpiło wewnątrz dropdown-container
       if (!clickedElement.closest('.dropdown-container')) {
         this.isDropDown = false;
+        this.isCopy = false;
       }
     }
   }
@@ -148,7 +149,7 @@ export class ColorToolbarComponent implements OnInit {
 
   // Copy
 
-  isCopy: boolean = false;
+  isCopy: boolean = true;
   changeCopy() {
     this.isCopy = !this.isCopy;
   }
