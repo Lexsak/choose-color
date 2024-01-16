@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ColorService } from 'src/app/color.service';
+import { Clipboard } from '@angular/cdk/clipboard';
+
 
 interface ColorPalettes {
   id: number;
@@ -16,7 +18,10 @@ export class ColorToolbarComponent implements OnInit {
   color: string = '#808080';
 
   // Colors from Toolbar
-  constructor(private colorService: ColorService) {}
+  constructor(
+    private colorService: ColorService,
+    private clipboard: Clipboard
+  ) {}
 
   getTextColor() {
     return this.colorService.textColor;
@@ -144,7 +149,20 @@ export class ColorToolbarComponent implements OnInit {
   // Copy
 
   isCopy: boolean = false;
-  changeCopy(){
-     this.isCopy = !this.isCopy;
+  changeCopy() {
+    this.isCopy = !this.isCopy;
+  }
+
+  copyColorContainer: string = '';
+  copyToClipboard() {
+    this.copyColorContainer = '';
+    this.copyColorContainer += `--text: ${this.colorService.textColor}; `;
+    this.copyColorContainer += `--background: ${this.colorService.backgroundColor}; `;
+    this.copyColorContainer += `--primary: ${this.colorService.primaryColor}; `;
+    this.copyColorContainer += `--secondary: ${this.colorService.secondaryColor}; `;
+    this.copyColorContainer += `--accent: ${this.colorService.accentColor};`;
+
+    this.clipboard.copy(this.copyColorContainer);
+    alert('skopiowano kolory do schowka');
   }
 }
