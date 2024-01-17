@@ -95,11 +95,13 @@
 </div>
 <div class="copy-container" *ngIf="isCopy" (click)="changeCopy()">
   <div class="copy-colors" (click)="$event.stopPropagation()">
-    <p>--text: {{ getTextColor() }}</p>
-    <p>--background: {{ getBackgroundColor() }}</p>
-    <p>--primary: {{ getPrimaryColor() }}</p>
-    <p>--background: {{ getSecondaryColor() }}</p>
-    <p>--accent: {{ getAccentColor() }}</p>
+    <div class="colors-container">
+      <p>--text: {{ getTextColor() }};</p>
+      <p>--background: {{ getBackgroundColor() }};</p>
+      <p>--primary: {{ getPrimaryColor() }};</p>
+      <p>--background: {{ getSecondaryColor() }};</p>
+      <p>--accent: {{ getAccentColor() }};</p>
+    </div>
     <button (click)="copyToClipboard()">Copy</button>
   </div>
 </div>

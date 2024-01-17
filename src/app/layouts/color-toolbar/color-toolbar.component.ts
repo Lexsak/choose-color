@@ -149,7 +149,7 @@ export class ColorToolbarComponent implements OnInit {
 
   // Copy
 
-  isCopy: boolean = true;
+  isCopy: boolean = false;
   changeCopy() {
     this.isCopy = !this.isCopy;
   }
