@@ -9,6 +9,7 @@ import { ColorToolbarComponent } from './layouts/color-toolbar/color-toolbar.com
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DocsComponent } from './pages/docs/docs.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ColorToolbarComponent,
     HomeComponent,
     BlogComponent,
-    DashboardComponent
+    DashboardComponent,
+    DocsComponent
   ],
   imports: [
     BrowserModule,
