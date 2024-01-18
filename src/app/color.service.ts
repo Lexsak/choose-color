@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ColorService {
   // Basic Colors
-  textColor: string = '#06150c';
+  textColor: string = '#161717';
   backgroundColor: string = '#f7fdfa';
   primaryColor: string = '#6d97d5';
   secondaryColor: string = '#92cddf';

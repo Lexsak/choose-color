@@ -5,13 +5,14 @@
   align-items: center;
 }
 
+/* Social Section */
 .social-section {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000
+  background-color: #000000;
 }
 .social-container {
   width: 1400px;
@@ -20,20 +21,85 @@
   align-items: center;
   color: #ffffff;
 }
-.social-container p{
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.social-container p {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
-.social{
+.social {
+  display: flex;
+  gap: 1.5rem;
+}
+.social svg {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.social svg:hover {
+  transform: scale(1.1);
+  backface-visibility: hidden;
+}
+
+/* Info Section */
+.footer-info {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.info-container{
+    width: 1400px;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
 }
-.social svg{
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo-container img{
+    height: 48px;
+    width: 48px;
+}
+.logo-container p{
+    font-weight: 600;
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: all .3s ease-in-out;
 }
-.social svg:hover{
-    transform: scale(1.1);
+.links-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.link h2{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+.link p{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.link p:hover{
+    transform: scale(0.9);
     backface-visibility: hidden;
+}
+
+/* Copyright */
+.copyright-container{
+    width: 100%;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    text-align: center;
 }

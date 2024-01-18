@@ -83,43 +83,45 @@
     </div>
 
     <!-- Footer info -->
-    <div class="footer-info">
+    <div class="footer-info" [style.background-color]="getRGBA(getTextColor(), '0.8')">
       <div class="info-container">
-        <div class="logo-container" routerLink="">
+        <div class="logo-container" routerLink="" [style.color]="getBackgroundColor()">
           <img src="../../../assets/logo.png" alt="logo" />
           <p>Choose Colors</p>
         </div>
-        <div class="links-container">
-          <h2>Explore</h2>
-          <p>Docs</p>
-          <p>Dashboard</p>
-          <p>Blog</p>
-        </div>
-        <div class="links-container">
-          <h2>Products</h2>
-          <p>Theme Design</p>
-          <p>Plugin Design</p>
-          <p>Template Design</p>
-        </div>
-        <div class="links-container">
-          <h2>Useful Links</h2>
-          <p>Your Account</p>
-          <p>Help</p>
-          <p>YouTube</p>
-        </div>
-        <div class="links-container">
-          <h2>Conntact</h2>
-          <p>info@example.com</p>
-          <p>+01 234 567 89</p>
-          <p>+98 765 432 10</p>
+        <div class="links-container" [style.color]="getBackgroundColor()">
+            <div class="link">
+              <h2>Explore</h2>
+              <p routerLink="docs">Docs</p>
+              <p routerLink="dashboard">Dashboard</p>
+              <p routerLink="blog">Blog</p>
+            </div>
+            <div class="link">
+              <h2>Products</h2>
+              <p>Theme Design</p>
+              <p>Plugin Design</p>
+              <p>Template Design</p>
+            </div>
+            <div class="link">
+              <h2>Useful Links</h2>
+              <p>Your Account</p>
+              <p>Help</p>
+              <p>YouTube</p>
+            </div>
+            <div class="link">
+              <h2>Conntact</h2>
+              <p>info@example.com</p>
+              <p>+01 234 567 89</p>
+              <p>+98 765 432 10</p>
+            </div>
         </div>
       </div>
     </div>
 
     <!-- Copyright -->
 
-    <div class="copyright-container">
-      <p>Copyright ©2024</p>
+    <div class="copyright-container" [style.background-color]="getTextColor()">
+      <p [style.color]="getBackgroundColor()">Copyright &copy;{{ currentYear }}</p>
     </div>
   </div>
 </footer>

@@ -74,7 +74,7 @@ export class ColorToolbarComponent implements OnInit {
     {
       id: 1,
       name: 'Default',
-      colors: ['#06150c', '#f7fdfa', '#6d97d5', '#92cddf', '#3cc77b'],
+      colors: ['#161717', '#f7fdfa', '#6d97d5', '#92cddf', '#3cc77b'],
     },
     {
       id: 2,
