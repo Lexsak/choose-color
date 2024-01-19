@@ -4,17 +4,19 @@ import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DocsComponent } from './pages/docs/docs.component';
+import { MoreComponent } from './pages/more/more.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'docs', component: DocsComponent },
-  {path: '*', component: HomeComponent}
+  { path: 'more', component: MoreComponent },
+  { path: '*', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
