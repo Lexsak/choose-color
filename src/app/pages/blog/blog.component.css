@@ -30,13 +30,35 @@
   border-radius: 8px;
   margin-bottom: 2rem;
 }
-.comment-profile{
+
+.blog-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comment-profile {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 0.8rem;
 }
 .comment-img {
   padding: 32px;
   border: 3px solid black;
   border-radius: 50px;
+}
+.comment-profile p {
+  font-size: 1.2rem;
+}
+.comment button {
+  margin-top: 1rem;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.comment button:hover {
+  transform: scale(0.9);
+  backface-visibility: hidden;
 }

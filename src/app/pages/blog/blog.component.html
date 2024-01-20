@@ -90,30 +90,15 @@
 <div class="blog-line" [ngStyle]="getGradient()"></div>
 
 <!-- Blog Comments -->
-<div class="blog-comments">
-  <!-- Add Comment -->
-  <div class="add-comment">
+<div class="blog-comments" [style.color]="getTextColor()">
+  <div class="comment">
     <div class="comment-profile">
       <div
         class="comment-img"
         [style.border-color]="getTextColor()"
         [style.background-color]="getPrimaryColor()"
       ></div>
-      <p>Me</p>
-    </div>
-    <input type="text" placeholder="Add a comment..." />
-    <button>Post</button>
-  </div>
-
-  <!-- Comments -->
-  <div class="add-comment">
-    <div class="comment-profile">
-      <div
-        class="comment-img"
-        [style.border-color]="getTextColor()"
-        [style.background-color]="getPrimaryColor()"
-      ></div>
-      <p></p>
+      <p>Lazlow Jones</p>
     </div>
     <p>
       Embarking on a cosmic odyssey through the enchanting banana galaxies, the
@@ -123,6 +108,36 @@
       boundaries of reason blur, and the cosmic ballet unfolds in delightful
       chaos across the astral plains.
     </p>
-    <button>Comment</button>
+    <button
+      [style.border-color]="getTextColor()"
+      [style.background-color]="getSecondaryColor()"
+    >
+      Reply
+    </button>
+  </div>
+
+  <div class="comment">
+    <div class="comment-profile">
+      <div
+        class="comment-img"
+        [style.border-color]="getTextColor()"
+        [style.background-color]="getAccentColor()"
+      ></div>
+      <p>Lamar Davis</p>
+    </div>
+    <p>
+      Embarking on a cosmic odyssey through the enchanting banana galaxies, the
+      surreal dance of time and colorful clouds captivates the imagination. In
+      this whimsical astral realm, logic takes a back seat, and reality becomes
+      a kaleidoscopic tapestry of the absurd. Join me on this journey where the
+      boundaries of reason blur, and the cosmic ballet unfolds in delightful
+      chaos across the astral plains.
+    </p>
+    <button
+      [style.border-color]="getTextColor()"
+      [style.background-color]="getSecondaryColor()"
+    >
+      Reply
+    </button>
   </div>
 </div>
