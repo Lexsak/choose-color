@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { ColorService } from 'src/app/color.service';
 
@@ -7,7 +8,12 @@ import { ColorService } from 'src/app/color.service';
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent {
-  constructor(private colorService: ColorService) {}
+  formattedDate: string;
+
+  constructor(private colorService: ColorService, private datePipe: DatePipe) {
+    const today = new Date();
+    this.formattedDate = this.datePipe.transform(today, 'EEEE, dd MM yyyy')!;
+  }
 
   getTextColor() {
     return this.colorService.textColor;

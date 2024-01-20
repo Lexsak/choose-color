@@ -11,6 +11,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DocsComponent } from './pages/docs/docs.component';
 import { MoreComponent } from './pages/more/more.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,13 @@ import { MoreComponent } from './pages/more/more.component';
     BlogComponent,
     DashboardComponent,
     DocsComponent,
-    MoreComponent
+    MoreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

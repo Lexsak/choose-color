@@ -6,7 +6,7 @@
 </h1>
 
 <p class="post-date" [style.color]="getRGBA(getTextColor(), '0.6')">
-  Saturday, 20 01 2024
+  {{ formattedDate }}
 </p>
 
 <div class="post-profile">
@@ -109,6 +109,7 @@
       chaos across the astral plains.
     </p>
     <button
+      [style.color]="getTextColor()"
       [style.border-color]="getTextColor()"
       [style.background-color]="getSecondaryColor()"
     >
@@ -134,6 +135,7 @@
       chaos across the astral plains.
     </p>
     <button
+      [style.color]="getTextColor()"
       [style.border-color]="getTextColor()"
       [style.background-color]="getSecondaryColor()"
     >
