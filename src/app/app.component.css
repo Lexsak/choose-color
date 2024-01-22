@@ -25,15 +25,21 @@
 
 /* 1450px */
 @media screen and (max-width: 1450px) {
-  .container{
-    width: 1200px
-  };
+  .container {
+    width: 1200px;
+  }
 }
 
 /* 1250px */
 @media screen and (max-width: 1250px) {
-  .container{
-    width: 800px
-  };
+  .container {
+    width: 800px;
+  }
 }
 
+/* 900px */
+@media screen and (max-width: 900px) {
+  .container {
+    width: 600px;
+  }
+}

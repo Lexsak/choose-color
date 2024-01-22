@@ -96,3 +96,10 @@ nav {
     width: 800px
   };
 }
+
+/* 900px */
+@media screen and (max-width: 900px) {
+  .container{
+    width: 600px
+  };
+}

@@ -450,8 +450,13 @@ h1 {
 .opinion q {
   font-size: 24px;
 }
+.profil {
+  display: flex;
+  align-items: center;
+}
 .profile {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .profile-img {
@@ -615,6 +620,22 @@ h1 {
   .opinion q {
     font-size: 16px;
   }
+  .profile-img {
+    padding: 32px;
+  }
+  .opinion {
+    gap: 1rem;
+    padding: 16px 24px;
+  }
+  .opinion q {
+    font-size: 16px;
+  }
+  .profile-text h4 {
+    font-size: 14px;
+  }
+  .profile-stars svg {
+    width: 20px;
+  }
 
   /* FAQ */
   .question {
@@ -637,5 +658,138 @@ h1 {
   .more-templates p {
     font-size: 20px;
     padding: 16px 32px;
+  }
+}
+
+/* 900px */
+@media screen and (max-width: 900px) {
+  /* Hero */
+  .hero-container {
+    align-items: center;
+    height: 20vh;
+  }
+  .hero-text {
+    gap: 1rem;
+  }
+  .hero-tile h1 {
+    font-size: 32px;
+  }
+  .hero-text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .hero-blocks {
+    height: 250px;
+  }
+
+  /* How Does It Works  */
+  .explore-steps {
+    gap: 1rem;
+  }
+  .explore-text h2 {
+    font-size: 24px;
+  }
+  .explore-text p,
+  .info-paragraph {
+    font-size: 13px;
+    margin: 0;
+  }
+  .info-paragraph svg {
+    height: 20px;
+  }
+  .steps {
+    height: 300px;
+  }
+  .steps h2 {
+    font-size: 32px;
+  }
+  .steps p {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .info-text {
+    font-size: 16px;
+  }
+
+  /* Simple Blocks */
+  #simple-blocks-title {
+    font-size: 32px;
+  }
+  .icon-block {
+    width: 50%;
+    padding: 32px;
+  }
+  .icon-block svg {
+    width: 32px;
+  }
+  .icon-block h2 {
+    font-size: 24px;
+  }
+  .icon-block p {
+    font-size: 14px;
+  }
+
+  /* Pricing Section */
+  .pricing-title {
+    font-size: 24px;
+  }
+  .pricing-btns p {
+    font-size: 12px;
+    padding: 4px;
+  }
+  .pricing-container {
+    height: 95vh;
+  }
+  .pricing-options {
+    flex-wrap: wrap;
+  }
+  .option {
+    gap: 2rem;
+    width: 47%;
+    padding: 24px 16px;
+  }
+  .recommended-info {
+    font-size: 12px;
+    padding: 2px;
+  }
+  .option-text h3 {
+    font-size: 24px;
+  }
+  .option-text p {
+    font-size: 12px;
+  }
+  .option h2 span{
+    font-size: 32px;
+  }
+  .option-btn{
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  /* Testimonials */
+  .testimonials-title h2{
+    font-size: 40px;
+  }
+  .testimonials {
+    flex-direction: column;
+  }
+
+  /* FAQ */
+  .faq-container{
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .faq-title, .faq-questions{
+    width: 100%;
+  }
+
+  /* More section */
+  .more-container{
+    height: 40vh;
+    gap: 2rem;
+  }
+  .more-title h2{
+    font-size: 40px;
+    margin-bottom: 0px;
   }
 }
