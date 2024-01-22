@@ -2,7 +2,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { ColorService } from 'src/app/color.service';
 import { Clipboard } from '@angular/cdk/clipboard';
 
-
 interface ColorPalettes {
   id: number;
   name: string;
@@ -165,5 +164,29 @@ export class ColorToolbarComponent implements OnInit {
 
     this.clipboard.copy(this.copyColorContainer);
     alert('skopiowano kolory do schowka');
+  }
+
+  // Close and Open ToolBar
+
+  isToolbar: boolean = true;
+  closeToolbar() {
+    this.isToolbar = false;
+  }
+  openToolbar() {
+    this.isToolbar = true;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkWindowSize();
+  }
+
+  private checkWindowSize() {
+    if (window.innerWidth >= 580) {
+      this.openToolbar();
+    } else {
+      // Jeśli chcesz, aby toolbar został zamknięty, gdy szerokość jest mniejsza niż 580
+      this.isToolbar = false;
+    }
   }
 }

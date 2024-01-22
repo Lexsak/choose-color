@@ -13,6 +13,10 @@
   gap: 1rem;
   border-radius: 8px;
 }
+.input-colors {
+  display: flex;
+  gap: 1rem;
+}
 
 .btn-color {
   padding: 0;
@@ -35,6 +39,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.action-btns-container {
+  display: flex;
+  gap: 1rem;
 }
 
 /* Color Inputs Names  */
@@ -175,15 +183,75 @@ input[type="color"]::-webkit-color-swatch {
   gap: 1rem;
 }
 
+.close-btn {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  height: 50px;
+  padding: 8px 16px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 24px;
+  display: none;
+}
+
 /* Media query */
 /* 1050px */
 @media screen and (max-width: 1050px) {
   .btn-color {
     width: 100px;
     height: 50px;
-    font-size: 12px;
   }
   .btn-color::after {
     font-size: 14px;
   }
+  .dropdown-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  svg,
+  img {
+    width: 24px;
+  }
+}
+
+/* 750px */
+@media screen and (max-width: 750px) {
+  .container {
+    height: 130px;
+  }
+  .colorContainer {
+    flex-direction: column;
+  }
+  .copy-colors{
+    width: 90%;
+  }
+  .copy-container{
+    height: 100%;
+  }
+}
+
+/* 580px */
+@media screen and (max-width: 580px) {
+  .container {
+    height: auto;
+  }
+  .colorContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .input-colors {
+    flex-direction: column;
+  }
+  .btn-color {
+    width: 300px;
+    height: 50px;
+  }
+  .btn-color::after {
+    font-size: 24px;
+  }
+  .close-btn{
+    display: block;
+  } 
 }
