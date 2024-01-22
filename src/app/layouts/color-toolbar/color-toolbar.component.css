@@ -224,10 +224,10 @@ input[type="color"]::-webkit-color-swatch {
   .colorContainer {
     flex-direction: column;
   }
-  .copy-colors{
+  .copy-colors {
     width: 90%;
   }
-  .copy-container{
+  .copy-container {
     height: 100%;
   }
 }
@@ -251,7 +251,10 @@ input[type="color"]::-webkit-color-swatch {
   .btn-color::after {
     font-size: 24px;
   }
-  .close-btn{
+  .close-btn {
     display: block;
-  } 
+  }
+  .colors-container p {
+    font-size: 12px;
+  }
 }

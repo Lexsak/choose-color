@@ -43,3 +43,13 @@
     width: 600px;
   }
 }
+
+/* 650px */
+@media screen and (max-width: 650px) {
+  .container {
+    width: 300px;
+  }
+  .main-container{
+    margin: 32px 0px;
+  }
+}

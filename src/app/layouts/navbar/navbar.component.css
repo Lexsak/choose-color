@@ -103,3 +103,12 @@ nav {
     width: 600px
   };
 }
+
+/* 650px */
+@media screen and (max-width: 650px) {
+  .container {
+    width: 300px;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

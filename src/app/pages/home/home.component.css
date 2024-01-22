@@ -383,6 +383,9 @@ h1 {
   transition: all 0.3s ease-in-out;
   will-change: transform;
 }
+.display-non {
+  display: none;
+}
 
 .recommended {
   background-color: rgb(146, 205, 223, 0.2);
@@ -758,16 +761,16 @@ h1 {
   .option-text p {
     font-size: 12px;
   }
-  .option h2 span{
+  .option h2 span {
     font-size: 32px;
   }
-  .option-btn{
+  .option-btn {
     font-size: 14px;
     padding: 6px 12px;
   }
 
   /* Testimonials */
-  .testimonials-title h2{
+  .testimonials-title h2 {
     font-size: 40px;
   }
   .testimonials {
@@ -775,21 +778,123 @@ h1 {
   }
 
   /* FAQ */
-  .faq-container{
+  .faq-container {
     flex-direction: column;
     margin-top: 80px;
   }
-  .faq-title, .faq-questions{
+  .faq-title,
+  .faq-questions {
     width: 100%;
   }
 
   /* More section */
-  .more-container{
+  .more-container {
     height: 40vh;
     gap: 2rem;
   }
-  .more-title h2{
+  .more-title h2 {
     font-size: 40px;
     margin-bottom: 0px;
+  }
+}
+
+/* 650px */
+@media screen and (max-width: 650px) {
+  /* Hero */
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+    margin-bottom: 48px;
+  }
+  .hero-text,
+  .hero-blocks {
+    width: 100%;
+  }
+
+  /* How Does It Works */
+  .explore-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+  .steps-container {
+    flex-direction: column;
+  }
+  .steps {
+    width: 100%;
+    height: auto;
+  }
+  .info-paragraph {
+    margin-top: 24px;
+  }
+
+  /* Simple Blocks  */
+  .icon-blocks {
+    align-items: center;
+    flex-direction: column;
+  }
+  .icon-block {
+    width: 100%;
+  }
+  .tiles-container {
+    height: 25%;
+  }
+  #clients,
+  #years {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  #awards,
+  #team {
+    font-size: 8px;
+    font-weight: 600;
+  }
+
+  /* Pricing Section */
+  .pricing-container {
+    height: 120vh;
+  }
+  .pricing-title {
+    text-align: center;
+  }
+  .display-non {
+    display: block;
+  }
+  .display-star {
+    display: none;
+  }
+
+  .testimonials-title hr {
+    width: 70%;
+  }
+  .testimonials-title h2 {
+    font-size: 36px;
+  }
+  .testimonials-title p {
+    font-size: 14px;
+  }
+
+  /* FAQ */
+  .faq-container {
+    margin-top: 120px;
+  }
+
+
+  /* More section */
+  .more-container{
+    height: 50vh;
+  }
+  .more-title h2{
+    font-size: 32px;
+  }
+  .more-title p{
+    font-size: 14px;
+  }
+  .more-templates {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
   }
 }

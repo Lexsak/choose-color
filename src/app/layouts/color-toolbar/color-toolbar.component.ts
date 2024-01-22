@@ -163,7 +163,7 @@ export class ColorToolbarComponent implements OnInit {
     this.copyColorContainer += `--accent: ${this.colorService.accentColor};`;
 
     this.clipboard.copy(this.copyColorContainer);
-    alert('skopiowano kolory do schowka');
+    alert('Colors copied to clipboard');
   }
 
   // Close and Open ToolBar
@@ -185,7 +185,6 @@ export class ColorToolbarComponent implements OnInit {
     if (window.innerWidth >= 580) {
       this.openToolbar();
     } else {
-      // Jeśli chcesz, aby toolbar został zamknięty, gdy szerokość jest mniejsza niż 580
       this.isToolbar = false;
     }
   }
