@@ -103,3 +103,13 @@
     color: white;
     text-align: center;
 }
+
+
+/* Media query */
+
+/* 1450px */
+@media screen and (max-width: 1450px) {
+  .social-container, .info-container{
+    width: 1200px
+  };
+}

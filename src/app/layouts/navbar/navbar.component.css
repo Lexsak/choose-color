@@ -80,3 +80,12 @@ nav {
   border-radius: 5px;
 }
 
+
+/* Media query */
+
+/* 1450px */
+@media screen and (max-width: 1450px) {
+  .container{
+    width: 1200px
+  };
+}
