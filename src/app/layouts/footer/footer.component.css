@@ -113,3 +113,10 @@
     width: 1200px
   };
 }
+
+/* 1250px */
+@media screen and (max-width: 1250px) {
+  .social-container, .info-container{
+    width: 800px
+  };
+}

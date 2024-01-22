@@ -79,7 +79,7 @@
     <!-- Explore Text -->
     <div class="explore-text">
       <h2 [style.color]="getTextColor()">
-        Explore the World of <br />
+        Explore the World of <br class="display-none" />
         <span [ngStyle]="getGradient()">Colors</span>
       </h2>
       <p [style.color]="getTextColor()">
@@ -88,39 +88,41 @@
       </p>
     </div>
 
-    <!-- Explore 1-3 steps -->
-    <div class="steps">
-      <div class="step">
-        <h2 [style.color]="getAccentColor()">1</h2>
-        <p [style.color]="getTextColor()">
-          Begin with two neutral colors one for text and another for the
-          background.
-        </p>
+    <div class="steps-container">
+      <!-- Explore 1-3 steps -->
+      <div class="steps">
+        <div class="step">
+          <h2 [style.color]="getAccentColor()">1</h2>
+          <p [style.color]="getTextColor()">
+            Begin with two neutral colors one for text and another for the
+            background.
+          </p>
+        </div>
+        <div class="step">
+          <h2 [style.color]="getAccentColor()">3</h2>
+          <p [style.color]="getTextColor()">
+            Incorporate an accent color for additional flair. This color will
+            appear in images, highlights, hyperlinks, boxes, cards, and more.
+          </p>
+        </div>
       </div>
-      <div class="step">
-        <h2 [style.color]="getAccentColor()">3</h2>
-        <p [style.color]="getTextColor()">
-          Incorporate an accent color for additional flair. This color will
-          appear in images, highlights, hyperlinks, boxes, cards, and more.
-        </p>
-      </div>
-    </div>
-    <!-- Explore 2-4 steps -->
-    <div class="steps">
-      <div class="step">
-        <h2 [style.color]="getAccentColor()">2</h2>
-        <p [style.color]="getTextColor()">
-          Select your primary and secondary colors. The primary color is for
-          main CTAs and sections, while the secondary color is ideal for less
-          prominent elements like buttons and info cards.
-        </p>
-      </div>
-      <div class="step">
-        <h2 [style.color]="getAccentColor()">4</h2>
-        <p [style.color]="getTextColor()">
-          Pleased with the results? Hit "Copy" and choose from various options
-          to export your personalized color palette.
-        </p>
+      <!-- Explore 2-4 steps -->
+      <div class="steps">
+        <div class="step">
+          <h2 [style.color]="getAccentColor()">2</h2>
+          <p [style.color]="getTextColor()">
+            Select your primary and secondary colors. The primary color is for
+            main CTAs and sections, while the secondary color is ideal for less
+            prominent elements like buttons and info cards.
+          </p>
+        </div>
+        <div class="step">
+          <h2 [style.color]="getAccentColor()">4</h2>
+          <p [style.color]="getTextColor()">
+            Pleased with the results? Hit "Copy" and choose from various options
+            to export your personalized color palette.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -217,7 +219,7 @@
   </div>
 
   <div
-    class="icon-block"
+    class="icon-block display-none"
     [style.background-color]="getRGBA(getSecondaryColor(), '0.2')"
   >
     <svg
