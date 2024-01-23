@@ -1,48 +1,88 @@
-.container{
-    display: flex;
-    width: 100%;
-    margin-top: -100px;
+.container {
+  display: flex;
+  width: 100%;
+  margin-top: -100px;
 }
 
 /* Menu */
-.menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    width: auto;
-    padding-right: 48px;
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: auto;
+  padding-right: 48px;
 }
-.menu-link{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-    padding: 12px 24px;
-    opacity: 0.5;
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 12px 24px;
+  opacity: 0.5;
 }
-.menu-link:hover, .menu-link.active{
-    opacity: 1;
-    border-radius: 50px;
+.menu-link:hover,
+.menu-link.active {
+  opacity: 1;
+  border-radius: 50px;
 }
-
 
 /* Chart */
-.chart{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 48px 32px;
+  width: 70%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.dashboard-title h1 {
+  font-weight: 600;
+}
+.dashboard-title p {
+  font-size: 1.1rem;
 }
 
-.rectangles{
-    display: flex;
-    align-items: flex-end;
-    gap: 1rem;
-
+/* Chart Tiles */
+.small-tiles {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-.rectangle{
-    width: 20px;
-    border-radius: 4px;
-    background-color: #ff0000;
+.tile {
+  display: flex;
+  align-items: center;
+  width: 225px;
+  gap: 1rem;
+  padding: 16px 32px;
+  border-radius: 16px;
+}
+
+/* Chart Container */
+.chart-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 16px 32px;
+    border-radius: 16px;
+}
+.chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 12px 32px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+.rectangles {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.rectangle {
+  width: 20px;
+  border-radius: 4px;
+  background-color: #ff0000;
 }

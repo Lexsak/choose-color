@@ -2,7 +2,10 @@
   <!-- Menu -->
   <div class="menu">
     <!-- First active element -->
-    <div class="menu-link active" [style.background-color]="getRGBA(getPrimaryColor(), '0.2')">
+    <div
+      class="menu-link active"
+      [style.background-color]="getRGBA(getPrimaryColor(), '0.2')"
+    >
       <svg
         [style.fill]="getPrimaryColor()"
         height="32px"
@@ -34,19 +37,24 @@
       </p>
     </div>
   </div>
+
+  <!-- Chart Section -->
   <div
-    class="stats"
+    class="chart-section"
     [style.background-color]="getRGBA(getPrimaryColor(), '0.2')"
+    [style.color]="getTextColor()"
   >
     <!-- Title -->
     <div class="dashboard-title">
-      <h1>Hi <span>Lorem,</span></h1>
-      <p>Hope your day is fantastic!</p>
+      <h1>
+        <span [style.color]="getRGBA(getTextColor(), '0.8')">Hi</span> Lorem,
+      </h1>
+      <p [style.color]="getRGBA(getTextColor(), '0.6')">Hope your day is fantastic!</p>
     </div>
 
     <!-- Small Tiles -->
     <div class="small-tiles">
-      <div class="tile" *ngFor="let tile of tilesDashboard">
+      <div class="tile" *ngFor="let tile of tilesDashboard"  [style.background-color]="getBackgroundColor()">
         <div [innerHTML]="tile.img" [style.fill]="getPrimaryColor()"></div>
         <div class="tiles-text">
           <h4>{{ tile.name }}</h4>
@@ -56,19 +64,19 @@
     </div>
 
     <!-- Chart -->
-    <div class="chart-container">
-      <h2>Today's statistics</h2>
-      <div class="chart">
+    <div class="chart-container"  [style.background-color]="getBackgroundColor()">
+      <h2>Today:</h2>
+      <div class="chart" [style.border-color]="getRGBA(getTextColor(), '0.2')">
         <div class="rectangles" *ngFor="let rectangle of rectangles">
           <div
             class="rectangle"
             [ngStyle]="{ height: rectangle.firstHeight }"
-            [style.background-color]="getPrimaryColor()"
+            [style.background-color]="getAccentColor()"
           ></div>
           <div
             class="rectangle"
             [ngStyle]="{ height: rectangle.secondHeight }"
-            [style.background-color]="getAccentColor()"
+            [style.background-color]="getPrimaryColor()"
           ></div>
         </div>
       </div>
