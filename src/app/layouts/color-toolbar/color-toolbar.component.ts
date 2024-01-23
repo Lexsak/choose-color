@@ -84,7 +84,7 @@ export class ColorToolbarComponent implements OnInit {
     {
       id: 3,
       name: 'Purple',
-      colors: ['#eae7f7', '#07050f', '#a69ede', '#642876', '#c553c5'],
+      colors: ['#10031a', '#faf6fe', '#9825e8', '#f17ac4', '#ec4b88'],
     },
     {
       id: 4,
@@ -98,7 +98,7 @@ export class ColorToolbarComponent implements OnInit {
     },
     {
       id: 6,
-      name: 'Dark Pink',
+      name: 'Pink',
       colors: ['#fce3f7', '#1d0318', '#f383d1', '#930f10', '#ea6c2d'],
     },
   ];
