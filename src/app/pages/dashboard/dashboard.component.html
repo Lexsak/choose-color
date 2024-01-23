@@ -1,7 +1,7 @@
 <div class="container">
   <div class="menu">
     <div class="menu-link" *ngFor="let link of menuDashboard">
-      <div [innerHTML]="link.img"></div>
+      <div [innerHTML]="link.img" [style.fill]="getPrimaryColor()"></div>
       <p>{{ link.name }}</p>
     </div>
   </div>
@@ -15,7 +15,7 @@
     <!-- Small Tiles -->
     <div class="small-tiles">
       <div class="menu-link" *ngFor="let tile of tilesDashboard">
-        <div [innerHTML]="tile.img"></div>
+        <div [innerHTML]="tile.img" [style.fill]="getPrimaryColor()"></div>
         <div class="tiles-text">
           <h4>{{ tile.name }}</h4>
           <p>{{ tile.number }}</p>
@@ -27,9 +27,109 @@
     <div class="chart-container">
       <h2>Today's statistics</h2>
       <div class="chart">
-        <div class="rectangle" [ngStyle]="{ height: dynamicHeight }" [style.background-color]="getPrimaryColor()"></div>
+        <div class="rectangles" *ngFor="let rectangle of rectangles">
+          <div
+            class="rectangle"
+            [ngStyle]="{ height: rectangle.firstHeight }"
+            [style.background-color]="getPrimaryColor()"
+          ></div>
+          <div
+            class="rectangle"
+            [ngStyle]="{ height: rectangle.secondHeight }"
+            [style.background-color]="getAccentColor()"
+          ></div>
+        </div>
       </div>
     </div>
+
   </div>
-  <div class="user-profile"></div>
+
+
+  <!-- User Profile -->
+  <div class="user-profile">
+    <div class="user-container">
+      <div class="user-img"></div>
+      <h1>Lorem Ipsum</h1>
+      <p>Frontend Developer</p>
+    </div>
+    <hr />
+    <div class="reminder">
+      <h2>Reminders</h2>
+      <svg height="32" viewBox="0 0 32 32">
+        <g data-name="Layer 30" id="Layer_30">
+          <path
+            class="cls-1"
+            d="M27,27H5a1,1,0,0,1-.89-1.45,18.14,18.14,0,0,0,1.89-8V14a10,10,0,0,1,20,0v3.53a18.14,18.14,0,0,0,1.89,8A1,1,0,0,1,27,27ZM6.55,25h18.9A20.14,20.14,0,0,1,24,17.53V14A8,8,0,0,0,8,14v3.53A20.14,20.14,0,0,1,6.55,25Z"
+          />
+          <path
+            class="cls-1"
+            d="M16,31a5,5,0,0,1-5-5,1,1,0,0,1,2,0,3,3,0,0,0,.88,2.12,3.08,3.08,0,0,0,4.24,0,1,1,0,0,1,1.42,1.42A5,5,0,0,1,16,31Z"
+          />
+          <path
+            class="cls-1"
+            d="M16,6a1,1,0,0,1-1-1V2a1,1,0,0,1,2,0V5A1,1,0,0,1,16,6Z"
+          />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Reminders task -->
+    <div class="task-container">
+      <div class="reminder-task">
+        <svg height="32px" width="32px" viewBox="0 0 32 32">
+          <path
+            class="st0"
+            d="M21.4,6L16,0.6l-14,14V20h5.4L21.4,6z M4,18v-2.6l12-12L18.6,6l-12,12H4z M2,22v2h20v-2H2z"
+          />
+        </svg>
+        <div class="reminder-text">
+          <h3>Homework</h3>
+          <p>8:00 AM - 9:00AM</p>
+        </div>
+        <svg
+          height="24"
+          stroke="black"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" stroke="none" />
+          <circle cx="12" cy="12" r="1" />
+          <circle cx="12" cy="19" r="1" />
+          <circle cx="12" cy="5" r="1" />
+        </svg>
+      </div>
+      <div class="reminder-task">
+        <svg height="32" viewBox="0 0 96 96">
+          <g>
+            <circle cx="64.2" cy="13" r="8" />
+            <path
+              d=" M 83.6 24 C 81.6 23 79.2 23.7 78.2 25.7 L 74.7 32.3 L 59.3 22.6 C 58.7 22.2 58 22 57.2 22 L 40.2 22 C 38.7 22 37.4 22.8 36.7 24.1 L 30.2 36.1 C 29.1 38 29.9 40.5 31.8 41.5 C 32.4 41.8 33.1 42 33.7 42 C 35.1 42 36.5 41.2 37.2 39.9 L 42.6 30 L 48.5 30 L 30.8 63 L 14.2 63 C 12 63 10.2 64.8 10.2 67 C 10.2 69.2 12 71 14.2 71 L 33.2 71 C 34.7 71 36 70.2 36.7 68.9 L 43.7 56 L 55.2 66.7 L 54.3 86.8 C 54.1 89 55.8 90.9 58 91 C 58.1 91 58.1 91 58.2 91 C 60.3 91 62.1 89.3 62.2 87.2 L 63.2 65.2 C 63.3 64 62.8 62.9 61.9 62.1 L 52.2 53.1 L 62.4 34.1 L 74 41.4 C 74.9 42 76.1 42.2 77.2 41.9 C 78.3 41.6 79.2 40.9 79.7 39.9 L 85.2 29.4 C 86.3 27.5 85.6 25.1 83.6 24 Z"
+            />
+          </g>
+        </svg>
+        <div class="reminder-text">
+          <h3>Running</h3>
+          <p>11:00 AM - 12:00PM</p>
+        </div>
+        <svg
+          height="24"
+          stroke="black"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" stroke="none" />
+          <circle cx="12" cy="12" r="1" />
+          <circle cx="12" cy="19" r="1" />
+          <circle cx="12" cy="5" r="1" />
+        </svg>
+      </div>
+      <svg height="32px" viewBox="0 0 32 32" width="32px">
+        <path
+          d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"
+        />
+      </svg>
+    </div>
+  </div>
 </div>

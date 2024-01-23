@@ -1,4 +1,18 @@
+.chart{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.rectangles{
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+
+}
 .rectangle{
     width: 20px;
     border-radius: 4px;
+    background-color: #ff0000;
 }
