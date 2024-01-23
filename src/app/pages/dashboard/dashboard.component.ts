@@ -143,10 +143,10 @@ export class DashboardComponent {
   ];
 
   rectangles: Rectangles[] = [
-    { firstHeight: '200px', secondHeight: '300px' },
-    { firstHeight: '100px', secondHeight: '150px' },
-    { firstHeight: '290px', secondHeight: '300px' },
-    { firstHeight: '70px', secondHeight: '120px' },
-    { firstHeight: '150px', secondHeight: '220px' },
+    { firstHeight: '40%', secondHeight: '50%' },
+    { firstHeight: '20%', secondHeight: '30%' },
+    { firstHeight: '70%', secondHeight: '20%' },
+    { firstHeight: '60%', secondHeight: '55%' },
+    { firstHeight: '90%', secondHeight: '100%' },
   ];
 }
