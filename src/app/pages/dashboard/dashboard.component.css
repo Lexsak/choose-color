@@ -49,6 +49,8 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .tile {
   display: flex;
@@ -60,12 +62,12 @@
 }
 
 /* Chart Container */
-.chart-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 16px 32px;
-    border-radius: 16px;
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 16px 32px;
+  border-radius: 16px;
 }
 .chart {
   display: flex;
@@ -84,5 +86,81 @@
 .rectangle {
   width: 20px;
   border-radius: 4px;
-  background-color: #ff0000;
+}
+
+/* User Profile */
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 48px 32px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 25%;
+}
+.user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-container h1 {
+  font-size: 24px;
+}
+.user-container p {
+  font-size: 14px;
+}
+.user-img {
+  padding: 44px;
+  border: 3px solid;
+  border-radius: 50px;
+}
+
+/* Reminder */
+.reminder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reminder h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.reminder svg {
+  padding: 4px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Task contianer */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.content-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.reminder-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+.category{
+    padding: 4px;
+    border-radius: 50px;
+}
+.reminder-text h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+.reminder-text p{
+    font-size: 13px;
 }
