@@ -1,1 +1,35 @@
-<p>dashboard works!</p>
+<div class="container">
+  <div class="menu">
+    <div class="menu-link" *ngFor="let link of menuDashboard">
+      <div [innerHTML]="link.img"></div>
+      <p>{{ link.name }}</p>
+    </div>
+  </div>
+  <div class="stats">
+    <!-- Title -->
+    <div class="dashboard-title">
+      <h1>Hi <span>Lorem,</span></h1>
+      <p>Hope your day is fantastic!</p>
+    </div>
+
+    <!-- Small Tiles -->
+    <div class="small-tiles">
+      <div class="menu-link" *ngFor="let tile of tilesDashboard">
+        <div [innerHTML]="tile.img"></div>
+        <div class="tiles-text">
+          <h4>{{ tile.name }}</h4>
+          <p>{{ tile.number }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+      <h2>Today's statistics</h2>
+      <div class="chart">
+        <div class="rectangle" [ngStyle]="{ height: dynamicHeight }" [style.background-color]="getPrimaryColor()"></div>
+      </div>
+    </div>
+  </div>
+  <div class="user-profile"></div>
+</div>
