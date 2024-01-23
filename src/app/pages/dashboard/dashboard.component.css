@@ -1,3 +1,33 @@
+.container{
+    display: flex;
+    width: 100%;
+    margin-top: -100px;
+}
+
+/* Menu */
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: auto;
+    padding-right: 48px;
+}
+.menu-link{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 12px 24px;
+    opacity: 0.5;
+}
+.menu-link:hover, .menu-link.active{
+    opacity: 1;
+    border-radius: 50px;
+}
+
+
+/* Chart */
 .chart{
     display: flex;
     justify-content: space-between;
